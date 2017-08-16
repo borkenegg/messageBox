@@ -63,13 +63,23 @@
     var message=get_id("message");
     var close=get_id("close");
     clickdiv.addEventListener("click",function(){
-     message.style.top=146+"px";
-     content.style.backgroundColor="gray";
-    });
+        moving(146,"gray");
+    },false);
+
     close.addEventListener("click",function(){
-        message.style.top=546+"px";
-        content.style.backgroundColor="white";
-    })
+        moving(546,"white")
+    },false);
+
+    content.addEventListener("click",function(){
+        moving(546,"white")
+    },false);
+    message.addEventListener("click",function(event){
+        if(document.all){
+            event.cancelBubble=true;
+        }else{
+            event.stopPropagation();
+        }
+    },false)
 
 
 </script>
