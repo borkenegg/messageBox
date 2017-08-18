@@ -2,86 +2,166 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>作业</title>
 </head>
-<script src="JS/tool.js"></script>
+
 
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
     #content{
-        margin: auto;
-        width: 375px;
-        height: 668px;
-        border: 1px solid #000;
-        overflow: hidden;
-        transition:all .5s ease-in-out;
+        width: 100vw;
+        height: 100vh;
+        background-color:darkorange;
+    }
+    #mask{
 
     }
-    #click{
-        margin:50px auto;
-        width: 40px;
-        height:20px;
-        border: 1px solid #000;
-        background-color: red;
-        text-align: center;
-        color: wheat;
-        cursor: pointer;
-    }
-    #message{
-        width: 373px;
-        height: 400px;
-        background-color:white;
-        border: 1px solid red;
-        position: relative;
-        top: 546px;
-        transition:all .5s ease-in-out;
-    }
-    #close{
-        width: 30px;
-        height: 30px;
-        background-color: red;
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
-        position: absolute;
-        right: 0;
-        cursor: pointer;
-    }
+    /*#click{*/
+        /*margin:50px auto;*/
+        /*width: 40px;*/
+        /*height:20px;*/
+        /*border: 1px solid #000;*/
+        /*background-color: red;*/
+        /*text-align: center;*/
+        /*color: wheat;*/
+        /*cursor: pointer;*/
+    /*}*/
+    /*#message{*/
+        /*width: 373px;*/
+        /*height: 400px;*/
+        /*background-color:white;*/
+        /*border: 1px solid red;*/
+        /*position: relative;*/
+        /*top: 546px;*/
+        /*z-index: 999;*/
+
+    /*}*/
+    /*#close{*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*background-color: red;*/
+        /*color: white;*/
+        /*border-radius: 50%;*/
+        /*text-align: center;*/
+        /*line-height: 30px;*/
+        /*position: absolute;*/
+        /*right: 0;*/
+        /*cursor: pointer;*/
+    /*}*/
 </style>
 <body>
 
 <div id="content">
-    <div id="click">点我</div>
-    <div id="message">
-        <div id="close">X</div>
-    </div>
+
 </div>
 
 </body>
 <script>
-    var clickdiv=get_id("click");
-    var content=get_id("content");
-    var message=get_id("message");
-    var close=get_id("close");
-    clickdiv.addEventListener("click",function(){
-        moving(146,"gray");
-    },false);
+    var mask=document.createElement("div");
+    mask.setAttribute("id","mask");
 
-    close.addEventListener("click",function(){
-        moving(546,"white")
-    },false);
 
-    content.addEventListener("click",function(){
-        moving(546,"white")
-    },false);
-    message.addEventListener("click",function(){
-        if(document.all){
-            event.cancelBubble=true;
-        }else{
-            event.stopPropagation();
-        }
-    },false)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    function get_id(id) {
+//        return document.getElementById(id)?document.getElementById(id):null;
+//    }
+//    var clickdiv=get_id("click");
+//    var content=get_id("content");
+//    var message=get_id("message");
+//    var close=get_id("close");
+//
+//    function getStyle(obj,attr){
+//        if(document.all){
+//            return parseInt(obj.currentStyle[attr]);
+//        }
+//        else{
+//            return parseInt(getComputedStyle(obj)[attr]);
+//        }
+//    }
+//
+//    message.timer=null;
+//    function moving(){
+//        clearInterval(message.timer);
+//        message.timer=setInterval(function() {
+//            var top_val = getStyle(message, "top");
+//            if (top_val > 146) {
+//                top_val-=10;
+//            }else{
+//                clearInterval(message.timer);
+//            }
+//            message.style.top=top_val+"px";
+//        },17);
+//
+//        var div=document.createElement("div");
+//        div.setAttribute("style","width:375px;height:668px;background-color:black");
+//
+//
+//        if(document.all){
+//            event.cancelBubble=true;
+//        }else{
+//            event.stopPropagation();
+//        }
+//
+//    }
+//    function moving1(){
+//        clearInterval(message.timer);
+//        message.timer=setInterval(function() {
+//            var top_val = getStyle(message, "top");
+//            if (top_val < 546) {
+//                top_val += 10;
+//            }else{
+//                clearInterval(message.timer);
+//            }
+//            message.style.top=top_val+"px";
+//        },17);
+//        if(document.all){
+//            event.cancelBubble=true;
+//        }else{
+//            event.stopPropagation();
+//        }
+//
+//    }
+//    clickdiv.addEventListener("click",function(){
+//        moving();
+//    },false);
+//    close.addEventListener("click",function(){
+//        moving1();
+//    },false);
+//    content.addEventListener("click",function(){
+//        moving1();
+//    },false);
+//    message.addEventListener("click",function(){
+//        if(document.all){
+//            event.cancelBubble=true;
+//        }else{
+//            event.stopPropagation();
+//        }
+//
+//    })
+//
+//
 
 </script>
 </html>
